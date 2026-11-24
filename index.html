@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100d12"><meta name="description" content="Un pequeño detalle hecho con mucho amor.">
+<title>Feliz primer mes, mi amor ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#100d12;color:#fff;font-family:Georgia,'Times New Roman',serif}body{overflow:hidden}.scene{position:relative;isolation:isolate;display:grid;place-items:center;width:100%;height:100%;min-height:100svh;background:#100d12}.scene video{position:absolute;z-index:-3;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.64) saturate(.82);animation:softFocus 2.2s ease both}.shade{position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,rgba(10,8,12,.34),rgba(16,10,16,.12) 40%,rgba(10,8,12,.72)),radial-gradient(ellipse at center,transparent 15%,rgba(10,8,12,.28) 100%)}.grain{position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}.content{width:min(90%,680px);padding:32px 20px;text-align:center;animation:rise 1.8s cubic-bezier(.2,.7,.2,1) both}.eyebrow{font:500 10px/1.5 Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#f1c4d2;margin-bottom:24px}.heart{color:#f2b5c9;font-size:24px;display:block;margin:0 auto 18px;animation:pulse 2.4s ease-in-out infinite}h1{font-weight:400;font-size:clamp(36px,8vw,68px);line-height:1.08;letter-spacing:-.035em;margin:0 auto 20px;text-shadow:0 3px 28px rgba(0,0,0,.4)}h1 span{color:#f2c0d0}.sub{font:300 14px/1.8 Arial,sans-serif;letter-spacing:.04em;color:rgba(255,245,248,.9);max-width:430px;margin:0 auto}.rule{height:1px;width:52px;background:#e9aebe;margin:28px auto 0;opacity:.8}.sound{position:absolute;bottom:max(26px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);border:1px solid rgba(255,255,255,.42);background:rgba(18,12,18,.35);backdrop-filter:blur(12px);color:#fff;border-radius:999px;padding:11px 17px;font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.sound:focus-visible{outline:2px solid #f2c0d0;outline-offset:4px}.sound span{color:#f2c0d0;margin-right:7px}@keyframes rise{from{opacity:0;transform:translateY(22px);filter:blur(7px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}@keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.13);opacity:1}}@keyframes softFocus{from{filter:brightness(.4) saturate(.7);transform:scale(1.035)}to{filter:brightness(.64) saturate(.82);transform:scale(1)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="scene">
+  <video id="memory" autoplay muted loop playsinline preload="auto" aria-label="Video romántico en bucle">
+    <source src="video-boomerang.mp4" type="video/mp4">
+  </video>
+  <div class="shade"></div><div class="grain"></div>
+  <section class="content" aria-label="Dedicatoria romántica">
+    <div class="eyebrow">Un pequeño recuerdo para nosotros</div>
+    <span class="heart" aria-hidden="true">♡</span>
+    <h1>Feliz primer mes<br><span>mi amor ❤️</span></h1>
+    <p class="sub">Que este sea solo el comienzo de una historia llena de momentos bonitos. Te elegiría una y mil veces.</p>
+    <div class="rule"></div>
+  </section>
+  <button class="sound" id="sound" type="button" aria-label="Activar sonido"><span>♫</span> Activar sonido</button>
+</main>
+<script>
+const video=document.getElementById('memory');
+const button=document.getElementById('sound');
+button.addEventListener('click',()=>{video.muted=!video.muted;button.innerHTML=video.muted?'<span>♫</span> Activar sonido':'<span>♫</span> Silenciar';button.setAttribute('aria-label',video.muted?'Activar sonido':'Silenciar');if(!video.muted) video.play().catch(()=>{});});
+</script>
+</body></html>
