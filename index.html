@@ -16,12 +16,20 @@
 *{box-sizing:border-box}
 
 html,body{
-margin:0;width:100%;min-height:100%;
-background:#100d12;color:#fff;
+margin:0;
+width:100%;
+min-height:100%;
+background:#100d12;
+color:#fff;
 font-family:'Cormorant Garamond',Georgia,serif;
 }
 
-body{overflow:hidden}
+body{
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* ESCENA PRINCIPAL */
 
 .scene{
 position:relative;
@@ -29,9 +37,11 @@ isolation:isolate;
 display:grid;
 place-items:center;
 width:100%;
+min-height:100vh;
 min-height:100svh;
-overflow:hidden;
+overflow:visible;
 background:#100d12;
+padding:50px 0 100px;
 }
 
 /* VIDEO DE FONDO */
@@ -184,14 +194,20 @@ text-shadow:0 3px 28px rgba(0,0,0,.5);
 
 h1 span{color:#f2c0d0}
 
+/* TEXTO JUSTIFICADO */
+
 .sub{
 font-family:Arial,sans-serif;
 font-size:13px;
 line-height:1.9;
 letter-spacing:.04em;
 color:rgba(255,245,248,.93);
-max-width:440px;
+max-width:650px;
+width:90%;
 margin:0 auto;
+text-align:justify;
+text-align-last:left;
+white-space:pre-line;
 }
 
 .rule{
